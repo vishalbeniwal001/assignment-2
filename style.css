@@ -1,0 +1,91 @@
+body{
+    background: yellowgreen;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.lyric-box-style{
+    color:white;
+    position: absolute;
+    font-size: larger;
+}
+
+.hidden{
+    display: none;
+}
+
+.footer-style{
+    position: absolute;
+    bottom: 10px;
+}
+
+.light{
+    font-weight: lighter;
+}
+.semi-bold{
+    font-weight: bold;
+}
+.bold {
+    font-weight: bolder;
+}
+.solid{
+    font-weight: 900;
+}
+.text-xxs{
+    font-size: x-small;
+}
+.text-xs{
+    font-size: smaller;
+}
+.text-sm{
+    font-size: small;
+}
+.text-lg {
+    font-size: large;
+}
+.text-xl{
+    font-size: larger;
+}
+.text-2xl{
+    font-size: x-large;
+}
+.text-3xl{
+    font-size: xx-large;
+}
+.italic{
+    font-style: italic;
+}
+.small-caps{
+    font-variant: small-caps;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.lowercase{
+    text-transform: lowercase;
+}
+.underline{
+    text-decoration: underline;
+}
+.dotted{
+    text-decoration: dotted;
+}
+.double{
+    text-decoration: double;
+}
+.solid{
+    text-decoration: solid;
+}
+.wavy{
+    text-decoration: wavy;
+}
+.bracket-text{
+    font-weight: bold;
+    font-size: larger;
+    font-style: italic;
+}
