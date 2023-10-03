@@ -145,7 +145,7 @@ const lyrics = [
     time: 63, //103
   },
   {
-    text: '<span class="light italic">Like</span>, "<span class="text-2xl bold">Baby</span>, <span class="text-2xl semi-bold">baby, baby</span>, <span class="text-xl uppercase">no</span>"',
+    text: '<span class="light italic">Like</span>, "<span class="text-2xl bold">Baby</span>, <span class="text-2xl semi-bold">baby, baby</span>, <span class="text-xl uppercase">oh</span>"',
     time: 68, //1.7
   },
   {
@@ -332,6 +332,8 @@ const lyrics = [
 
 const lyricEle = document.getElementById("lyric-section");
 const audio = document.getElementById("myAudio");
+const infoSection = document.getElementById('info-section');
+const lyricBars = document.getElementById('music-bars-section');
 
 let currentIndex = 0;
 const syncLyrics = () => {
@@ -347,16 +349,20 @@ const syncLyrics = () => {
 };
 
 const startScript = () => {
+  infoSection.classList.add('hidden');
+  lyricEle.classList.remove('hidden');
+  lyricBars.classList.remove('hidden');
   audio.play();
-  // loadLyrics();
   audio.addEventListener("timeupdate", syncLyrics);
 };
 
 const stopScript = () => {
+  infoSection.classList.remove('hidden');
+  lyricEle.classList.add('hidden');
+  lyricBars.classList.add('hidden');
   audio.pause();
   audio.currentTime = 0;
   currentIndex = 0;
 };
 
 
-// loadLyrics();

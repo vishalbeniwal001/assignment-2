@@ -14,15 +14,28 @@
             <source src="./assets/song.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
-
-        <button onclick="startScript()">
-            Start
-        </button>
-        <button onclick="stopScript()">
-            Stop
-        </button>
+        <div class="buttons-div">
+            <button class="custom-button" onclick="startScript()">
+                Start
+            </button>
+            <button class="custom-button" onclick="stopScript()">
+                Stop
+            </button>
+        </div>
         <article>
-            <section id="lyric-section" class="lyric-box-style line-hidden">
+            <section id="music-bars-section" class="hidden">
+                <div class="music-bars">
+                    <div class="bar bar-1"></div>
+                    <div class="bar bar-2"></div>
+                    <div class="bar bar-3"></div>
+                    <div class="bar bar-4"></div>
+                    <div class="bar bar-5"></div>
+                </div>
+            </section>
+            <section id="lyric-section" class="lyric-box-style hidden">
+            </section>
+            <section id="info-section">
+                Click on Start to play <i>"Baby - Justin Bieber"</i>
             </section>
         </article>
     </main>

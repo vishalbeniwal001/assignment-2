@@ -1,90 +1,410 @@
-body{
-    background: yellowgreen;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+body {
+    background: rgb(246, 221, 225);
 }
 
-article{
+article {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 85vh;
 }
 
-.lyric-box-style{
-    color:white;
-    position: absolute;
+.lyric-box-style {
+    color: black;
+    /* position: absolute; */
     font-size: larger;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Young Serif', serif;
 }
 
-.hidden{
+#info-section{
+    font-family: 'Mooli', sans-serif;
+    font-size: x-large;
+}
+
+.hidden {
     display: none;
 }
 
-.footer-style{
+.footer-style {
     position: absolute;
     bottom: 10px;
+    font-family: 'Playfair Display', serif;
 }
 
-.light{
+.buttons-div {
+    display: flex;
+    justify-content: center;
+}
+
+/* Style the button */
+.custom-button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #3498db;
+    /* Background color */
+    border: 2px solid #2980b9;
+    /* Border color */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 10px 20px;
+    /* Padding (top/bottom, left/right) */
+    margin: 10px;
+    /* Margin around the button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+/* Hover effect */
+.custom-button:hover {
+    background-color: #2980b9;
+    /* Darker background color on hover */
+    color: #ffffff;
+    /* Text color on hover */
+}
+
+/* Active state */
+.custom-button:active {
+    background-color: #1e6eb9;
+    /* Darker background color when clicked */
+}
+
+
+/* Basic styling for the music bars container */
+.music-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 200px;
+    /* Adjust the width as needed */
+    height: 150px;
+    /* Adjust the height as needed */
+    background-color: #222;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 50px auto;
+}
+
+/* Individual music bars */
+.bar {
+    width: 20px;
+    height: 5px;
+    background-color: #3498db;
+    /* Adjust the bar color */
+    margin: 0 10px;
+    /* Adjust the margin between bars */
+}
+
+.bar-1 {
+    animation: music-bars-animation-1 0.3s alternate infinite ease-in-out;
+    /* Apply the animation */
+}
+
+.bar-2 {
+    animation: music-bars-animation-2 0.3s alternate infinite ease-in-out;
+    /* Apply the animation */
+}
+
+.bar-3 {
+    animation: music-bars-animation-3 0.3s alternate infinite ease-in-out;
+    /* Apply the animation */
+}
+
+.bar-4 {
+    animation: music-bars-animation-4 0.3s alternate infinite ease-in-out;
+    /* Apply the animation */
+}
+
+.bar-5 {
+    animation: music-bars-animation-5 0.3s alternate infinite ease-in-out;
+    /* Apply the animation */
+}
+
+/* Keyframes for the music bars animation */
+@keyframes music-bars-animation-1 {
+    0% {
+        height: 5px;
+        background-color: #3498db;
+        /* Blue */
+    }
+
+    20% {
+        height: 30px;
+        background-color: #e74c3c;
+        /* Red */
+    }
+
+    40% {
+        height: 90px;
+        background-color: #27ae60;
+        /* Green */
+    }
+
+    60% {
+        height: 50px;
+        background-color: #f1c40f;
+        /* Yellow */
+    }
+
+    80% {
+        height: 120px;
+        background-color: #9b59b6;
+        /* Purple */
+    }
+
+    100% {
+        height: 5px;
+        background-color: #3498db;
+        /* Blue */
+    }
+}
+
+@keyframes music-bars-animation-2 {
+    0% {
+        height: 10px;
+        background-color: #3498db;
+        /* Blue */
+    }
+
+    25% {
+        height: 40px;
+        background-color: #e74c3c;
+        /* Red */
+    }
+
+    50% {
+        height: 80px;
+        background-color: #27ae60;
+        /* Green */
+    }
+
+    75% {
+        height: 120px;
+        background-color: #f1c40f;
+        /* Yellow */
+    }
+
+    100% {
+        height: 10px;
+        background-color: #3498db;
+        /* Blue */
+    }
+}
+
+@keyframes music-bars-animation-3 {
+    0% {
+        height: 5px;
+        background-color: #3498db;
+        /* Blue */
+    }
+
+    25% {
+        height: 10px;
+        background-color: #e74c3c;
+        /* Red */
+    }
+
+    50% {
+        height: 60px;
+        background-color: #27ae60;
+        /* Green */
+    }
+
+    75% {
+        height: 120px;
+        background-color: #f1c40f;
+        /* Yellow */
+    }
+
+    100% {
+        height: 5px;
+        background-color: #3498db;
+        /* Blue */
+    }
+}
+
+@keyframes music-bars-animation-4 {
+    0% {
+        height: 10px;
+        background-color: #3498db;
+        /* Blue */
+    }
+
+    20% {
+        height: 50px;
+        background-color: #e74c3c;
+        /* Red */
+    }
+
+    40% {
+        height: 70px;
+        background-color: #27ae60;
+        /* Green */
+    }
+
+    60% {
+        height: 100px;
+        background-color: #f1c40f;
+        /* Yellow */
+    }
+
+    80% {
+        height: 130px;
+        background-color: #9b59b6;
+        /* Purple */
+    }
+
+    100% {
+        height: 10px;
+        background-color: #3498db;
+        /* Blue */
+    }
+}
+
+@keyframes music-bars-animation-5 {
+    0% {
+        height: 8px;
+        background-color: #3498db;
+        /* Blue */
+    }
+
+    15% {
+        height: 25px;
+        background-color: #e74c3c;
+        /* Red */
+    }
+
+    30% {
+        height: 60px;
+        background-color: #27ae60;
+        /* Green */
+    }
+
+    45% {
+        height: 40px;
+        background-color: #f1c40f;
+        /* Yellow */
+    }
+
+    60% {
+        height: 100px;
+        background-color: #9b59b6;
+        /* Purple */
+    }
+
+    75% {
+        height: 20px;
+        background-color: #34495e;
+        /* Dark Gray */
+    }
+
+    90% {
+        height: 80px;
+        background-color: #e67e22;
+        /* Orange */
+    }
+
+    100% {
+        height: 8px;
+        background-color: #3498db;
+        /* Blue */
+    }
+}
+
+
+
+
+.light {
     font-weight: lighter;
 }
-.semi-bold{
+
+.semi-bold {
     font-weight: bold;
 }
+
 .bold {
     font-weight: bolder;
 }
-.solid{
+
+.solid {
     font-weight: 900;
 }
-.text-xxs{
+
+.text-xxs {
     font-size: x-small;
 }
-.text-xs{
+
+.text-xs {
     font-size: smaller;
 }
-.text-sm{
+
+.text-sm {
     font-size: small;
 }
+
 .text-lg {
     font-size: large;
 }
-.text-xl{
+
+.text-xl {
     font-size: larger;
 }
-.text-2xl{
+
+.text-2xl {
     font-size: x-large;
 }
-.text-3xl{
+
+.text-3xl {
     font-size: xx-large;
 }
-.italic{
+
+.italic {
     font-style: italic;
 }
-.small-caps{
+
+.small-caps {
     font-variant: small-caps;
 }
-.uppercase{
+
+.uppercase {
     text-transform: uppercase;
 }
-.lowercase{
+
+.lowercase {
     text-transform: lowercase;
 }
-.underline{
+
+.underline {
     text-decoration: underline;
 }
-.dotted{
+
+.dotted {
     text-decoration: dotted;
 }
-.double{
+
+.double {
     text-decoration: double;
 }
-.solid{
+
+.solid {
     text-decoration: solid;
 }
-.wavy{
+
+.wavy {
     text-decoration: wavy;
 }
-.bracket-text{
+
+.bracket-text {
     font-weight: bold;
     font-size: larger;
     font-style: italic;
